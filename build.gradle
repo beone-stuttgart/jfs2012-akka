@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+  mavenCentral()
+  maven {
+    url 'http://repo.akka.io/releases/'
+  }
+}
+
+dependencies {
+  compile 'com.typesafe.akka:akka-actor:2.0.2'
+}
+
+task createWrapper(type : Wrapper) {
+  gradleVersion = '1.0'
+}
+
